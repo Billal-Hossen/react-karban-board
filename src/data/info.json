@@ -5,7 +5,8 @@
           {
               "id":1,
               "priority": 0,
-              "title": "Company website redesign.",
+              "prograss":20,
+              "title": "Design Hello-Supuer-Star andmin dashboard.",
               "chat": 1,
               "attachment": 2,
               "assignees": [
@@ -15,8 +16,9 @@
               ]
           },
           {
-              "id":2,
+              "id":1,
               "priority": 2,
+              "prograss":70,
               "title": "Mobile app login process prototype.",
               "chat": 10,
               "attachment": 4,
@@ -29,7 +31,7 @@
       ]
   },
   {
-      "name":"In Progress",
+      "name":"Todo",
       "items": [
           {
               "id":3,
@@ -46,12 +48,12 @@
       ]
   },
   {
-      "name":"In Review",
+      "name":"In Progress",
       "items": [
           {
               "id":4,
               "priority": 2,
-              "title": "Dashboard layout redesign.",
+              "title": "Design Common Deshboard for company website.",
               "chat": 13,
               "attachment": 2,
               "assignees": [
@@ -63,7 +65,7 @@
           {
               "id":5,
               "priority": 0,
-              "title": "Social media posts",
+              "title": "Implement the Government project of dnd.",
               "chat": 0,
               "attachment": 0,
               "assignees": [
@@ -75,7 +77,7 @@
       ]
   },
   {
-      "name":"Completed",
+      "name":"Done",
       "items": [
           {
               "id":6,
@@ -91,7 +93,7 @@
           },
           {
               "id":7,
-              "priority": 1,
+              "priority": 2,
               "title": "Navigation designs",
               "chat": 0,
               "attachment": 0,

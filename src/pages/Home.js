@@ -2,13 +2,9 @@ import React, {useEffect, useState } from 'react';
 import BoardInfo from '../data/info.json';
 import CardItem from "../components/CardItem";
 import {
-  ChevronDownIcon,
-  PlusIcon,
   DotsVerticalIcon,
   PlusCircleIcon,
 } from "@heroicons/react/outline";
-
-
 import { DragDropContext, Draggable, Droppable } from "react-beautiful-dnd";
 
 
@@ -18,6 +14,7 @@ function createGuidId() {
     return v.toString(16);
   });
 }
+
 const Home = () => {
   const [ready, setReady] = useState(true);
   const [boardData, setBoardData]   = useState(BoardInfo);
@@ -27,11 +24,6 @@ const Home = () => {
   const [showForm, setShowForm] = useState(false);
   const [selectedBoard, setSelectedBoard] = useState(0);
 
-  // useEffect(() => {
-  //   if (process.browser) {
-  //     setReady(true);
-  //   }
-  // }, []);
 
   const onDragEnd = (re) => {
     if (!re.destination) return;
@@ -51,7 +43,8 @@ const Home = () => {
   };
 
   const onTextAreaKeyPress = (e) => {
-    if(e.keyCode === 13) //Enter
+    
+    if(e.keyCode === 13)
     {
       const val = e.target.value;
       if(val.length === 0) {
@@ -80,7 +73,7 @@ const Home = () => {
   
     {ready && (
       <DragDropContext onDragEnd={onDragEnd}>
-        <div className="grid grid-cols-4 gap-5 my-5">
+        <div className="grid grid-cols-4 gap-5 my-16">
           {boardData.map((board, bIndex) => {
             return (
               <div key={board.name}>
@@ -96,7 +89,7 @@ const Home = () => {
                         ${snapshot.isDraggingOver && "bg-green-100"}`}
                       >
                         <span
-                          className="w-full h-1 bg-gradient-to-r from-pink-700 to-red-200
+                          className="w-full h-1 bg-gradient-to-r bg-current
                       absolute inset-x-0 top-0"
                         ></span>
                         <h4 className=" p-3 flex justify-between items-center mb-2">

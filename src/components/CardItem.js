@@ -1,9 +1,7 @@
 import React from "react";
 
 import {
-  ChevronDownIcon,
   PlusIcon,
-  DotsVerticalIcon,
   ChatAlt2Icon,
   PaperClipIcon,
 } from "@heroicons/react/outline";
@@ -37,7 +35,11 @@ function CardItem({ data, index }) {
               ? "Medium Priority"
               : "High Priority"}
           </label>
-          <h5 className="text-md my-3 text-lg leading-6">{data.title}</h5>
+          <h5 className="text-md my-3 text-lg leading-6 m-autu bg-gradient-to-r from-purple-400
+        to-blue-50 rounded">{data.title}</h5>
+          <div className="w-full bg-gray-200 rounded-full">
+              <div className={`bg-blue-600 text-xs font-medium text-blue-100 text-center p-0.5 leading-none rounded-l-full ${data.priority===0 ?"w-1/4" : "w-9/12" }`}  > {data.priority===0 ?"25%" : "70%" }</div>
+          </div>
           <div className="flex justify-between">
             <div className="flex space-x-2 items-center">
               <span className="flex space-x-1 items-center">
